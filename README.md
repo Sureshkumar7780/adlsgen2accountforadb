@@ -1,0 +1,1 @@
+# adlsgen2accountforadb
