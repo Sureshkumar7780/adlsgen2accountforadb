@@ -1,0 +1,15 @@
+{
+	"name": "adf-reource-dev",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "850272ea-df5f-4ebe-b1ad-ca2ae9a78264",
+		"tenantId": "7e480a20-beb5-4ac7-8870-4f9b96dd3e66"
+	}
+}
