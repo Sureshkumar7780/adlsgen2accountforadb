@@ -61,6 +61,44 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Until1",
+				"type": "Until",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@activity('Copy data1').output",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Filter1",
+							"type": "Filter",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"items": {
+									"value": "@activity('Copy data1').output",
+									"type": "Expression"
+								},
+								"condition": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						}
+					],
+					"timeout": "0.12:00:00"
+				}
 			}
 		],
 		"annotations": [],
